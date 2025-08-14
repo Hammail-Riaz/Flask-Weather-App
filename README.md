@@ -37,9 +37,14 @@ The app fetches weather data using a public weather API and displays details suc
 5. **Frontend Display** → The results are displayed on a web page with a clean UI.
 
 ---
-## About API
+## 🔑 About API Key
 
-In this Weather app we use free API from https://openweathermap.org/ by just Signing in. You have to get your own api this contain a dummy API in .env file. You just have to paste you API in .env file and run the app.
+In this Weather app we use free API key from https://openweathermap.org/ by just Signing in. You have to get your own API Key this contain a dummy API Key in .env file. You just have to paste you API Key in .env file and run the app.
+
+---
+## 🌐 Accessing App Online
+
+This weather app is deployed on [pythonanywhere.com](https://pythonanywhere.com) by using the free plan. You can also access the Weather App by visiting this link -> [Click Here](https://hammailriazweb.pythonanywhere.com/)
 
 ---
 ## 📂 Project Structure
