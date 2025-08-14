@@ -49,6 +49,7 @@ flask-weather-app/
 ├── static/                  # CSS, Images, JavaScript
 │   ├── style.css
 │   ├── sky.jpg
+│   ├── ScreenShot.png
 │
 ├── templates/               # HTML Templates
 │   ├── index.html
