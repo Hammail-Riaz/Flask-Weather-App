@@ -9,7 +9,7 @@ You are strictly prohibited from:
 - Redistributing or selling any part of the software or its assets.
 - Modifying, reverse-engineering, or creating derivative works from the software.
 - Claiming authorship or ownership of the software, its name, or its assets.
-- Uploading or publishing this game to any platform or repository without prior written permission.
+- Uploading or publishing this software to any platform or repository without prior written permission.
 
 Proper credit to Hammail must be retained at all times in any context where the game is referenced, shown, or reviewed.
 
