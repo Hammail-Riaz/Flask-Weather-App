@@ -7,7 +7,7 @@ The app fetches weather data using a public weather API and displays details suc
 
 ## 📸 Screenshot
    
-![Weather App Screenshot](Statics/screenshot.png)
+![Weather App Screenshot](Statics/ScreenShot.png)
 
 ---
 
@@ -38,5 +38,27 @@ The app fetches weather data using a public weather API and displays details suc
 
 ---
 ## About API
+
 In this Weather app we use free API from https://openweathermap.org/ by just Signing in. You have to get your own api this contain a dummy API in .env file. You just have to paste you API in .env file and run the app.
 
+---
+## 📂 Project Structure
+```bash
+flask-weather-app/
+│
+├── static/                  # CSS, Images, JavaScript
+│   ├── style.css
+│   ├── sky.jpg
+│
+├── templates/               # HTML Templates
+│   ├── index.html
+│
+├── app.py                   # Main Flask application
+├── requirements.txt         # Python dependencies
+├── README.md                # Project documentation
+└── .env
+```
+---
+## 📜 License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
