@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% block title %}Blog App - Admin-Login{%endblock%}
+
+{% block body %}
+<div class="container">
+<h1>Admin Panel</h1>
+{% with messages = get_flashed_messages(with_categories=true) %}
+  {% if messages %}
+    {% set category, message = messages[0] %}
+    <div class="alert alert-{{ category }}">
+      {{ message }}
+    </div>
+  {% endif %}
+{% endwith %}
+
+<form action="/admin-login" method="post">
+    <label for="admin-name">Admin Name:</label>
+    <input type="text" name="admin-name" required>
+    <label for="admin-password">Admin Password:</label>
+    <input type="password" name="admin-password" required>
+    
+    <button type="submit">Login As Admin</button>
+</form>
+</div>
+
+{% endblock %}

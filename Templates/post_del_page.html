@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block title %}Blog App - Admin-Login{%endblock%}
+
+{% block body %}
+<div class="container">
+<h1>Edit Post</h1>
+
+<form action=" {{ url_for('post_del_page') }} " method="post">
+
+    Posts token:<br>
+    <input type="text" name="token" required>
+    <button type="submit" class="del-btn" >Delete Post</button>
+</form>
+</div>
+{% endblock %}

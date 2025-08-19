@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+{% block title %}Blog App - All Post{% endblock %}
+
+{% block body %}
+<div class="container">
+
+<h1>Admin Panel</h1>
+{% with messages = get_flashed_messages(with_categories=true) %}
+  {% if messages %}
+    {% set category, message = messages[0] %}
+    <div class="alert alert-{{ category }}">
+      {{ message }}
+    </div>
+  {% endif %}
+{% endwith %}
+
+<a href=" {{ url_for('admin_logout') }} " class="logout-btn">Admin Logout</a>
+<table border="1">
+  <tr>
+    <th>ID</th>
+    <th>Title</th>
+    <th>Action</th>
+  </tr>
+  {% for post in posts %}
+  <tr>
+    <td>{{ loop.index }}</td>
+    <td>{{ post.post_title }}</td>
+    <td>
+      <a href="{{ url_for('delete_post', post_id=post.s_no) }}" class="del-btn">Delete</a>
+    </td>
+  </tr>
+  {% endfor %}
+</table>
+
+</div>
+{%endblock%}
