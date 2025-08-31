@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body class="sky-background">
+
+    <h1>Location Information</h1>
+    <form method="post">
+        <label>Country Name:</label>
+        <input type="text" name="country" placeholder="e.g. Pakistan" value="{{ request.form.country or '' }}" required>
+
+        <label>City Name:</label>
+        <input type="text" name="city" placeholder="e.g. Lahore" value="{{ request.form.city or '' }}" required>
+
+        <div class="button-container">
+            <button type="submit">Get Weather Report</button>
+        </div>
+    </form>
+
+    <div class="weather-report">
+
+        {% if weather_info %}
+
+            <div class="container mt-4">
+              <div class="card shadow-lg border-0 rounded-3">
+                <div class="card-header text-center bg-primary text-white">
+                  <h3 class="mb-0">Today's Weather in {{ weather_info.city }}, {{ weather_info.country }}</h3>
+                </div>
+                <div class="card-body">
+
+                  <!-- Temperature Section -->
+                  <div class="card mb-3 border-0 shadow-sm">
+                    <div class="card-body">
+                      <h4 class="card-title"><u><strong>🌡 Temperature</strong></u></h4>
+                      <p>Current:  {{ weather_info.temp }} °C</p>
+                      <p>Feels Like: {{ weather_info.feels_like }} °C (Approx.)</p>
+                    </div>
+                  </div>
+
+                  <!-- Conditions Section -->
+                  <div class="card mb-3 border-0 shadow-sm">
+                    <div class="card-body">
+                      <h4 class="card-title"><u><strong>☁ Conditions</strong></u></h4>
+                      <p>Condition: {{ weather_info.description }}</p>
+                      <p>Humidity: {{ weather_info.humidity }}%</p>
+                      <p>Wind: {{ weather_info.wind_speed }} m/s ({{ weather_info.wind_dir }})</p>
+                    </div>
+                  </div>
+
+                  <!-- Atmosphere Section -->
+                  <div class="card mb-3 border-0 shadow-sm">
+                    <div class="card-body">
+                      <h4 class="card-title"><u><strong>🌬 Atmosphere</strong></u></h4>
+                      <p>Pressure: {{ weather_info.pressure }} hPa</p>
+                      <p>Cloud Coverage: {{ weather_info.clouds }}%</p>
+                      <p>Visibility: {{ weather_info.visibility }} km</p>
+                    </div>
+                  </div>
+
+
+                  <!-- Sunrise / Sunset -->
+                  <div class="card mb-3 border-0 shadow-sm">
+                    <div class="card-body">
+                      <h4 class="card-title"><u><strong>🌅 Day Cycle</strong></u></h4>
+                      <p>Sunrise: {{ weather_info.sunrise }} (Approx.)</p>
+                      <p>Sunset: {{ weather_info.sunset }} (Approx.)</p>
+                    </div>
+                  </div>
+
+                </div>
+                <div class="card-footer text-center">
+                  Credits - Hammail
+                </div>
+              </div>
+            </div>
+
+
+
+
+        {% elif error_message %}
+            <p style="color : red;">{{ error_message }}</p>
+        {% else %}
+            <p style="color: green;">Enter the valid country and city name to get the weather report!</p>
+        {% endif %}
+
+
+
+    </div>
+
+</body>
+</html>

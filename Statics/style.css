@@ -1,0 +1,125 @@
+
+/* style.css */
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #f0f4f8;
+    color: #333;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+h1 {
+    color: darkblue;
+    margin-bottom: 20px;
+}
+
+form {
+    background: white;
+    padding: 20px 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+label {
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+input[type="text"] {
+    padding: 8px 10px;
+    border: 1.8px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    transition: border-color 0.3s;
+}
+
+input[type="text"]:focus {
+    border-color: #0077cc;
+    outline: none;
+}
+
+.button-container {
+    text-align: center;
+}
+
+button {
+    background-color: #0077cc;
+    color: white;
+    font-weight: bold;
+    border: none;
+    padding: 10px 0;
+    width: 100%;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #005fa3;
+}
+
+p {
+    font-size: 16px;
+    margin-top: 25px;
+    text-align: center;
+}
+
+@media (max-width: 400px) {
+    form {
+        width: 90%;
+        padding: 15px;
+    }
+}
+/* Weather report container */
+.weather-report {
+    background: linear-gradient(135deg,  #B0E0E6, #FAF9F6 100%);
+    /* background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%); */
+    color: green;
+    padding: 20px 30px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 127, 255, 0.4);
+    margin-top: 30px;
+    width: 320px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+}
+
+/* Headline */
+.weather-report h1 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+    text-shadow: 0 1px 3px rgba(0,0,0,0.3);
+}
+
+/* Details */
+.weather-report p {
+    font-size: 1.1rem;
+    margin: 8px 0;
+    font-weight: 600;
+}
+
+/* Add subtle icon styling if you want (optional) */
+.weather-report .icon {
+    font-size: 48px;
+    margin-bottom: 10px;
+}
+.sky-background {
+    background-image: url("/Statics/sky.jpg");
+    background-size: cover;       /* makes the image fill the screen */
+    background-repeat: no-repeat; /* prevents tiling */
+    background-attachment: fixed; /* keeps background fixed while scrolling */
+}
+.emoji {
+    color: initial !important;
+}
