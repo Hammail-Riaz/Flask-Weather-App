@@ -8,8 +8,8 @@ import os
 
 
 load_dotenv()
-# api_key = os.getenv('WEATHER_API_KEY')
-api_key = "d1a359d9370352e8e8dd1ccb889ab489"
+api_key = os.getenv('WEATHER_API_KEY')
+
 
 
 def country_name_to_code(name):
