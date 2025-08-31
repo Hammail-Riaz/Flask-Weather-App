@@ -40,3 +40,7 @@ The app fetches weather data using a public weather API and displays details suc
 ## About API
 In this Weather app we use free API from https://openweathermap.org/ by just Signing in. You have to get your own api this contain a dummy API in .env file. You just have to paste you API in .env file and run the app.
 
+---
+## Use Live app
+In this Weather is live click [here](https://hammailriazweb.pythonanywhere.com/)
+
